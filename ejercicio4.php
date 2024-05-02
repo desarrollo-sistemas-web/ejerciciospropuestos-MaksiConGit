@@ -6,7 +6,24 @@
 
 // Aquí tu código
 
+function mayorDelArreglo($arreglo){
 
+    $num = 0;
+
+    if ($arreglo == null){
+        return -1;
+    }
+    
+    foreach($arreglo as $numero){
+
+        if ($numero > $num){
+            $num = $numero;
+        }        
+    }
+
+    return $num;
+
+}
 
 
 // TESTS

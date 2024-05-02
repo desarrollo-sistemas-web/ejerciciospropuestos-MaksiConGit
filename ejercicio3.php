@@ -6,7 +6,27 @@
 
 // Aquí tu código
 
+function operacion(int $a, int $b, string $c){
 
+    switch ($c) {
+        case "+":
+          $d = $a + $b;
+            break;
+        case "-":
+            $d = $a - $b;
+            break;
+        case "*":
+            $d = $a * $b;
+            break;
+        case "/":
+            $d = $a / $b;
+            break;  
+        default:
+            $d = -1;
+    }
+
+    return $d;
+}
 
 
 // TESTS
