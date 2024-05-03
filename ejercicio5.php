@@ -9,7 +9,19 @@
 
 // Aquí tu código
 
+function slug(string $texto){
 
+    if ($texto <> " " && $texto <> ""){
+        $texto = strtolower($texto);
+        $texto = str_replace(" ", "-", $texto, $count);
+        return $texto;
+    }
+    else{
+        return "error";
+    }
+
+
+}
 
 
 // TESTS

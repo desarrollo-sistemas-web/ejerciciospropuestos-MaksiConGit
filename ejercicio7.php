@@ -37,13 +37,34 @@ $puntuaciones2 = [
 
 // Aquí tu código
 
+function puntuacion($punts){
 
+    $total = 0;
+
+    foreach ($punts as $punt){
+        $total += $punt;
+    }
+
+    $prome = $total / count($punts);
+    $max = max($punts);
+    $min = min($punts);
+    $indexmax[] = array_search($max, $punts);
+    $indexmin[] = array_search($min, $punts);
+
+    $newpunt = ["promedio" => $prome,
+                "max" => $max,
+                "min" => $min,
+                "max_users" => $indexmax,
+                "min_users" => $indexmin];
+
+    return $newpunt;
+}
 
 
 // TESTS
 assert(puntuacion($puntuaciones) == [
     "promedio" => 5.5,
-    "max" => 9,
+    "max" => 10,
     "min" => 1,
     "max_users" => ["Raquel"],
     "min_users" => ["Jorge"]
