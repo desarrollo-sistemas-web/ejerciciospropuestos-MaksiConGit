@@ -37,7 +37,20 @@ $puntuaciones2 = [
 
 // Aquí tu código
 
+function puntuacion($punts){
 
+    $newpunt = [];
+
+    foreach ($punts as $name => $punt){
+
+        $total += $punt;
+        echo "$name $punt<br>";
+    }
+
+    echo $total / count($punts);
+    echo max($punts);
+
+}
 
 
 // TESTS
