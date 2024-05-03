@@ -8,7 +8,29 @@
 
 // Aquí tu código
 
+function palindromo(string $word){
 
+    # Letras a minúsculas
+    $lower_word = strtolower($word);
+
+    # Se quitan los espacios
+    $formated_word = str_replace(" ", "", $lower_word);
+
+    # Se quitan las tildes
+    # En este ejemplo basta con quitar el tilde del "a"
+    $formated_word = str_replace("á", "a", $formated_word);
+
+    # Dar vuelta el string
+    $reverse_formated_word = strrev($formated_word);
+
+    if ($formated_word == $reverse_formated_word){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
 
 // TESTS
 assert(palindromo("Anita lava la tina") == true);
